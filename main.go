@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	handler "golang-vercel/api"
+	"golang-vercel/api"
 	"net/http"
 )
 
