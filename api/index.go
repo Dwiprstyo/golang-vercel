@@ -1,10 +1,14 @@
-package handler
- 
+package main
+
 import (
-  "fmt"
-  "net/http"
+	"go-vercel/api/handler"
+	"net/http"
 )
- 
-func Handler(w http.ResponseWriter, r *http.Request) {
-  fmt.Fprintf(w, "<h1>Hello from Go!</h1>")
+
+func main() {
+	http.HandleFunc("/", handler.Handler)
+
+	port := "8080"
+	println("Server starting on http://localhost:" + port)
+	http.ListenAndServe(":"+port, nil)
 }
